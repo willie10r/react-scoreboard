@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from './Header';
 import Player from './Player';
-// import Counter from './Counter';
+import AddPlayerForm from "./AddPlayerForm";
 
 
 
 const App = () => {
-  const [players, setPlayers] = React.useState([
+  const [players, setPlayers] = useState([
     {
       name: "Guil",
       score: 0,
@@ -53,7 +53,7 @@ const App = () => {
     <div className="scoreboard">
       <Header
         title="Scoreboard"
-        totalPlayers={players.length}
+        players={players}
       />
 
       {/* Players list */}
@@ -67,6 +67,7 @@ const App = () => {
           removePlayer={handleRemovePlayer}
         />
       )}
+      <AddPlayerForm/>
     </div>
   );
 
