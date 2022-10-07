@@ -28,6 +28,7 @@ const App = () => {
       id: 4
     }
   ]);
+  const [nextPlayerId, setNextPlayerId] = useState(5);
 
   const handleRemovePlayer = (id) => {
     setPlayers(prevPlayers => prevPlayers.filter(p => p.id !== id));
@@ -46,6 +47,17 @@ const App = () => {
       return player;
     }));
     console.log('id' + id, delta);
+  }
+  const handleAddPlayer = (name) => {
+    setPlayers(prevPlayers => [
+      ...prevPlayers,
+      {
+        name,
+        score: 0,
+        id: nextPlayerId
+      }
+    ]);
+    setNextPlayerId(prevId => prevId + 1);
   }
 
 
@@ -67,7 +79,7 @@ const App = () => {
           removePlayer={handleRemovePlayer}
         />
       )}
-      <AddPlayerForm/>
+      <AddPlayerForm addPlayer={handleAddPlayer} />
     </div>
   );
 
