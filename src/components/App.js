@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Header from './Header';
 import Player from './Player';
 import AddPlayerForm from "./AddPlayerForm";
@@ -28,7 +28,7 @@ const App = () => {
       id: 4
     }
   ]);
-  const [nextPlayerId, setNextPlayerId] = useState(5);
+  const nextPlayerId = useRef(5);
 
   const handleRemovePlayer = (id) => {
     setPlayers(prevPlayers => prevPlayers.filter(p => p.id !== id));
@@ -54,10 +54,10 @@ const App = () => {
       {
         name,
         score: 0,
-        id: nextPlayerId
+        id: nextPlayerId.current++
       }
     ]);
-    setNextPlayerId(prevId => prevId + 1);
+
   }
 
 
