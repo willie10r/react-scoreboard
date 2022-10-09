@@ -82,7 +82,7 @@ const App = () => {
       <AddPlayerForm addPlayer={handleAddPlayer} />
     </div>
   );
-
+console.log('yeah');
 }
 
 export default App;
