@@ -5,17 +5,19 @@ It was a tutorial so the idea was not my own. This app used props to pass inform
 State was also used in the app to keep track and change player information in multiple components in the app.
 
 
-##processes and tools used
-*html
-*css
-*javascript
-*react
+##processes and tools used<br/>
+*html<br/>
+*css<br/>
+*javascript<br/>
+*react<br/>
 *git
 
-##continued development
+##continued development<br/>
 
-##socials
-Linkedin:
-Frontendmentor:
-Github:
-Instagram:
+
+##socials<br/>
+[Linkedin:](//www.linkedin.com/in/willie-morris-0b2571229/)<br/>
+[Frontendmentor:](https://www.frontendmentor.io/profile/Willie10r)<br/>
+[Github:](https://github.com/willie10r)<br/>
+[Instagram:](https://www.instagram.com/zx10rwillie/)
+
